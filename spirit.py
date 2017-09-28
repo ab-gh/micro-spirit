@@ -42,6 +42,18 @@ d_roll = Image("00900:"
                "00900:"
                "00900")
 
+r_n_roll = Image("00090:"
+                 "00900:"
+                 "00900:"
+                 "00900:"
+                 "09000")
+
+l_n_roll = Image("09000:"
+                 "00900:"
+                 "00900:"
+                 "00900:"
+                 "00090")
+
 if button_a.is_pressed():
     button = "a"
 else:
@@ -51,7 +63,9 @@ while True:
     roll = accelerometer.get_x()
     if -1024 <= roll <= -900:
         display.show(h_roll)
-    elif -900 <= roll <= -500:
+    elif -900 <= roll <= -700:
+        display.show(l_n_roll)
+    elif -700 <= roll <= -500:
         display.show(l_roll)
     elif -500 <= roll <= -100:
         display.show(l_h_roll)
@@ -63,8 +77,10 @@ while True:
         display.show(c_roll)
     elif 100 <= roll <= 500:
         display.show(r_h_roll)
-    elif 500 <= roll <= 900:
+    elif 500 <= roll <= 700:
         display.show(r_roll)
+    elif 700 <= roll <= 900:
+        display.show(r_n_roll)
     elif 900 <= roll <= 1024:
         display.show(h_roll)
 
