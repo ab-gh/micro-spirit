@@ -57,8 +57,9 @@ while True:
         display.show(r_roll)
     elif -1000 <= roll <= -500:
         display.show(l_roll)
-    else:
+    elif -1024 <= roll <= -1000:
         display.show(h_roll)
-
+    elif 1000 <= roll <= 1024:
+        display.show(h_roll)
 
 #flat = -1024
