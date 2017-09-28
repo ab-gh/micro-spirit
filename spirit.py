@@ -55,7 +55,7 @@ while True:
         display.show(l_roll)
     elif -500 <= roll <= -100:
         display.show(l_h_roll)
-    if -100 <= roll <= -40:
+    elif -100 <= roll <= -40:
         display.show(c_roll)
     elif -40 <= roll <= 40:
         display.show(d_roll)
