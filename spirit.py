@@ -67,6 +67,7 @@ else:
 
 while True:
     roll = accelerometer.get_x()
+    pitch = accelerometer.get_y()
     if -1024 <= roll <= -900:           # horizontal
         display.show(h_roll)
     elif -900 <= roll <= -700:          # near horizontal left
@@ -89,5 +90,6 @@ while True:
         display.show(r_n_roll)
     elif 900 <= roll <= 1024:           # horizontal
         display.show(h_roll)
+    #elif 40 <= roll <= 40 and 40 <= pitch <= 40:
 
 # flat = -1024
