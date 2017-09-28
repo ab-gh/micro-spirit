@@ -43,11 +43,11 @@ else:
 
 while True:
     roll = accelerometer.get_x()
-    if -100 <= roll <= -10:
+    if -100 <= roll <= -40:
         display.show(c_roll)
-    elif 10 <= roll <= 100:
+    elif 40 <= roll <= 100:
         display.show(c_roll)
-    elif -10 <= roll <= 10:
+    elif -40 <= roll <= 40:
         display.show(h_roll)
     elif 100 <= roll <= 500:
         display.show(r_h_roll)
