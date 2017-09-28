@@ -61,27 +61,27 @@ else:
 
 while True:
     roll = accelerometer.get_x()
-    if -1024 <= roll <= -900:
+    if -1024 <= roll <= -900:           # horizontal
         display.show(h_roll)
-    elif -900 <= roll <= -700:
+    elif -900 <= roll <= -700:          # near horizontal left
         display.show(l_n_roll)
-    elif -700 <= roll <= -500:
+    elif -700 <= roll <= -500:          # left
         display.show(l_roll)
-    elif -500 <= roll <= -100:
+    elif -500 <= roll <= -100:          # near vertical left
         display.show(l_h_roll)
-    elif -100 <= roll <= -40:
+    elif -100 <= roll <= -40:           # vertical
         display.show(c_roll)
-    elif -40 <= roll <= 40:
+    elif -40 <= roll <= 40:             # dead centre
         display.show(d_roll)
-    elif 40 <= roll <= 100:
+    elif 40 <= roll <= 100:             # vertical
         display.show(c_roll)
-    elif 100 <= roll <= 500:
+    elif 100 <= roll <= 500:            # near vertical right
         display.show(r_h_roll)
-    elif 500 <= roll <= 700:
+    elif 500 <= roll <= 700:            # right
         display.show(r_roll)
-    elif 700 <= roll <= 900:
+    elif 700 <= roll <= 900:            # near horizontal right
         display.show(r_n_roll)
-    elif 900 <= roll <= 1024:
+    elif 900 <= roll <= 1024:           # horizontal
         display.show(h_roll)
 
 
