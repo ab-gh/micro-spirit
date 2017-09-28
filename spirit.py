@@ -21,8 +21,6 @@ while True:
     roll = accelerometer.get_x()
     if -100 <= roll <= 100:
         display.show(c_roll)
-        sleep(3000)
-        display.show(Image.YES)
     elif roll > 100:
         display.show(r_roll)
     else:
