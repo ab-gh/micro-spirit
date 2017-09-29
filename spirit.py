@@ -1,4 +1,5 @@
 from microbit import *
+
 # /
 r_roll = Image("00009:"
                "00090:"
@@ -60,14 +61,20 @@ l_n_roll = Image("09000:"
                  "00900:"
                  "00090")
 
+# TODO: Buttons - Toggle Axis
 if button_a.is_pressed():
     button = "a"
 else:
     button = "b"
 
+# Loops
 while True:
+  
+    # Get data
     roll = accelerometer.get_x()
     pitch = accelerometer.get_y()
+    
+    # Test data
     if -1024 <= roll <= -900:           # horizontal
         display.show(h_roll)
     elif -900 <= roll <= -700:          # near horizontal left
