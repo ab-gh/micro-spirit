@@ -76,12 +76,25 @@ while True:
         display.set_pixel(2, 4, 9)
     else:
         display.show(" ")
-
-## FIX
-while True:
     yaw = accelerometer.get_z()
-    if -1024 <= yaw <= -500:
-        display.set_pixel(0, 2, 9)
-    else:
+    if -1200 <= yaw <= -1024:
         display.set_pixel(0, 2, 0)
+        display.set_pixel(1, 2, 0)
+        display.set_pixel(2, 2, 9)
+        display.set_pixel(3, 2, 0)
+        display.set_pixel(4, 2, 0)
+    elif -1024 <= yaw <= -500:
+        display.set_pixel(0, 2, 0)
+        display.set_pixel(1, 2, 9)
+        display.set_pixel(3, 2, 9)
+        display.set_pixel(4, 2, 0)
+    elif -500 <= yaw <= 1024:
+        display.set_pixel(0, 2, 9)
+        display.set_pixel(1, 2, 0)
+        display.set_pixel(3, 2, 0)
+        display.set_pixel(4, 2, 9)
+    else:
+        display.show(" ")
+
+
 
