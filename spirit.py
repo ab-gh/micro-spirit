@@ -21,6 +21,7 @@ l_n_roll = Image("09000:" "00900:" "00900:" "00900:" "00090")
 # <->
 startim = Image("00000:" "09090:" "99999:" "09090:" "00000")
 # Main
+compass.calibrate()
 while True:
     button = 2
     display.show(startim)
